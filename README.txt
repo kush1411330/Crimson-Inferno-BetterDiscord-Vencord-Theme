@@ -7,8 +7,7 @@ Installation Steps:
 1. Make sure you have Vencord installed with your discord client.
 2. Navigate to Settings -> Themes -> Edit QuickCSS
 3. Paste the code from CSS file to the Edit QuickCSS window.
-
-![Alt](https://raw.githubusercontent.com/user/repo/branch/path/to/image.png)
+![Alt](Discord Home Page.png)
 
 
 
