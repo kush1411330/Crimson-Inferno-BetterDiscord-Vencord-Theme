@@ -18,6 +18,10 @@ Custom Cursor
 ![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/a87a70077ae0bdb71524221e857d8535f9b36d66/Custom%20Cursor.png)
 
 
+[![Watch the video](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/89b69ae5d36a528f442e52c9095bf914b30924c7/Theme_showcase.mp4)
+
+
+
 
 
 
