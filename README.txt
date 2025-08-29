@@ -7,7 +7,7 @@ Installation Steps:
 1. Make sure you have Vencord installed with your discord client.
 2. Navigate to Settings -> Themes -> Edit QuickCSS
 3. Paste the code from CSS file to the Edit QuickCSS window.
-![Alt](Discord Home Page.png)
+![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/master/Discord%20Home%20page.png)
 
 
 
