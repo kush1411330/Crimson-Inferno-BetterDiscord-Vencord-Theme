@@ -1,0 +1,324 @@
+/**
+ * @name Crimson Inferno
+ * @author kush1411330
+ * @version 2.4.3
+ * 
+ * @description 
+ * A custom Discord theme inspired by a fiery cyberpunk aesthetic.  
+ * Crimson Inferno combines deep black backdrops with glowing neon red and blue 
+ * highlights for a bold, high-contrast experience. Featuring:
+ * 
+ *  - Gradient backgrounds (black → crimson)
+ *  - Neon red borders, text glows, and button styling
+ *  - Custom square neon-blue cursor
+ *  - Breathing yellow-glow mention badges
+ *  - Red-themed scrollbars with dark translucent tracks
+ *  - Sidebar font override (DIN Next)
+ *  - Cyberpunk-style flickering headers
+ * 
+ * Built for users who want a sleek, modern look that captures 
+ * the feeling of heat, neon, and energy. 
+ * 
+ * Ideal for night owls and cyberpunk enthusiasts.
+ */
+
+/* ---------------------------------------------------
+   Fonts
+--------------------------------------------------- */
+@import url('https://fonts.cdnfonts.com/css/dint');
+
+/* ---------------------------------------------------
+   Theme Variables
+--------------------------------------------------- */
+:root {
+  --background-primary: #000000;
+  --background-gradient-overlay: linear-gradient(180deg, rgba(255, 60, 60, 0.4) 0%, rgba(0, 0, 0, 0.85) 75%, #000000 100%);
+  --home-gradient-full: linear-gradient(180deg, rgba(255,0,0,0.35) 0%, #0b0606 70%, #000 100%);
+
+  --font-primary: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  --sidebar-font: 'DIN Next', sans-serif;
+
+  --primary-text-color: #ebebeb;
+  --primary: 23, 3, 10;
+  --red: 255, 40, 32;
+  --cp-blue: 8, 196, 255;
+  --cp-green: 140, 255, 63;
+
+  --primary-color: rgba(var(--primary), 0.90);
+  --neon-red-color: rgba(var(--red), 0.95);
+  --neon-blue-color: rgba(var(--cp-blue), 1);
+  --neon-green-color: rgba(var(--cp-green), 1);
+
+  --avatar-circle: 8px;
+  --avatar-border: 2px solid var(--neon-red-color);
+
+  --mention-badge-bg: #ffe600;
+  --mention-badge-shadow: 0 0 4px #ffd600, 0 0 10px #fff400;
+  --mention-font-weight: 500;
+  --mention-radius: 4px;
+}
+
+/* ---------------------------------------------------
+   Global Body
+--------------------------------------------------- */
+body {
+  background-color: var(--background-primary);
+  background-image: var(--background-gradient-overlay);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  color: var(--primary-text-color);
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: none;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------------------------------------------------
+   Backgrounds
+--------------------------------------------------- */
+.chatContent-3KubbW,
+.messagesWrapper__36d07 {
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.4) 0%, rgba(0, 0, 0, 1) 70%) !important;
+}
+
+.messagesWrapper__36d07::before {
+  display: none !important;
+  content: none !important;
+}
+
+.appMount-3lHmkl,
+.layers-3iHuyZ,
+.app-3xd6d0,
+.homeWrapper-1UTP8J,
+.wrapper-1_HaEi,
+.base-21yXnu,
+.content-1SgpWY,
+.nowPlayingColumn-1eCBCN,
+.peopleColumn-1wMU14,
+.container-2cd8Mz,
+.container-2o3qEW,
+.containerDefault-1pz3eO,
+.scroller-2TZvBN,
+.scroller-2qwVWY {
+  background: var(--home-gradient-full) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
+  box-shadow: none !important;
+}
+
+/* ---------------------------------------------------
+   Neon Flicker Animation (Titles)
+--------------------------------------------------- */
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; text-shadow: 0 0 3px #ff2820; }
+  50% { opacity: 0.7; text-shadow: 0 0 2px #fa1919; }
+}
+
+h1, h2, h3, .title_f75fb0 {
+  color: var(--neon-red-color);
+  animation: neon-flicker 3s infinite;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 3px #ff2820;
+}
+
+/* ---------------------------------------------------
+   Buttons
+--------------------------------------------------- */
+button,
+.button-38aScr,
+.button-1t6JD6,
+.bd-button {
+  background: transparent;
+  border: 2px solid var(--neon-red-color);
+  color: var(--neon-red-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 0 2px #fa1919;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover,
+.button-38aScr:hover,
+.button-1t6JD6:hover,
+.bd-button:hover {
+  background: #18181d;
+  color: var(--neon-blue-color);
+  border: 2px solid var(--neon-blue-color);
+  box-shadow: 0 0 4px #08c4ff, 0 0 7px #4ae5ff;
+}
+
+/* ---------------------------------------------------
+   Scrollbars (Crimson style)
+--------------------------------------------------- */
+.scrollerInner-2YIMLh::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.scrollerInner-2YIMLh::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background-color: var(--neon-red-color) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.scrollerInner-2YIMLh::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background-color: rgba(26, 0, 0, 0.7) !important;
+}
+
+/* ---------------------------------------------------
+   Avatars
+--------------------------------------------------- */
+.avatar_c19a55 {
+  border-radius: var(--avatar-circle);
+  border: var(--avatar-border);
+  box-shadow: 0 0 3px #ff2820b8;
+  transition: box-shadow 0.3s;
+}
+
+.avatar_c19a55:hover {
+  box-shadow: 0 0 6px #fa1919, 0 0 8px #ff2820;
+}
+
+/* ---------------------------------------------------
+   Input / Message Box
+--------------------------------------------------- */
+.channelTextArea_f75fb0 {
+  background: rgba(25, 7, 14, 0.92);
+  border: 2px solid var(--neon-red-color) !important;
+  border-radius: 10px;
+  color: var(--primary-text-color);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+}
+
+.channelTextArea_f75fb0:focus-within,
+.channelTextArea_f75fb0:focus,
+.channelTextArea_f75fb0:active {
+  border: 2px solid var(--neon-red-color) !important;
+  box-shadow: none !important;
+}
+
+.channelTextArea_f75fb0 textarea:focus,
+.channelTextArea_f75fb0 *:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ---------------------------------------------------
+   Selected Channel
+--------------------------------------------------- */
+.nsfocused,
+.modeSelected__2ea32,
+.modeSelected-3DgcJz,
+.link-1_m3vN,
+.link__95dc0 {
+  border: none !important;
+  box-shadow: none !important;
+  background: #200b0b !important;
+  color: var(--neon-blue-color) !important;
+}
+
+/* ---------------------------------------------------
+   Text & Links
+--------------------------------------------------- */
+.messageContent-2qWWxC {
+  text-shadow: 0 0 1px #fa1919;
+}
+
+a {
+  color: var(--neon-blue-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 2px #08c4ff;
+}
+
+a:hover {
+  color: var(--neon-red-color);
+  text-decoration: underline;
+  text-shadow: 0 0 3px #ff2820;
+}
+
+/* ---------------------------------------------------
+   Mentions & Badges
+--------------------------------------------------- */
+@keyframes breathing-glow-yellow {
+  50% { box-shadow: 0 0 5px 2px #fff600, 0 0 12px 4px #ffd600; }
+}
+
+.mentionBadge-3Di0AV,
+.mention-3XBnnZ,
+.mention,
+.numberBadge-2s8kKX,
+.iconBadge-3Mmg92,
+.badge__6d56b,
+.newBadge__4de95 {
+  background: var(--mention-badge-bg) !important;
+  color: #111 !important;
+  border-radius: var(--mention-radius) !important;
+  border: 2px solid var(--mention-badge-bg) !important;
+  font-weight: var(--mention-font-weight) !important;
+  z-index: 3;
+  position: relative;
+  animation: breathing-glow-yellow 2s infinite;
+  text-shadow: none !important;
+}
+
+/* ---------------------------------------------------
+   Sidebar Font Override
+--------------------------------------------------- */
+.sidebar-1tnWFu,
+.sidebar-1tnWFu a,
+.headerContent_f37cb1,
+.content-1gYQeQ,
+.name__2ea32 {
+  font-family: var(--sidebar-font) !important;
+}
+
+/* ---------------------------------------------------
+   Custom Neon Blue Square Cursor
+--------------------------------------------------- */
+body, * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><rect x='1' y='1' width='18' height='18' fill='none' stroke='%2308c4ff' stroke-width='2'/><rect x='8' y='8' width='4' height='4' fill='%2308c4ff'/></svg>") 10 10, auto;
+}
+
+button:hover,
+a:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><rect x='1' y='1' width='18' height='18' fill='none' stroke='%2308c4ff' stroke-width='2'/><rect x='8' y='8' width='4' height='4' fill='%2308c4ff'/></svg>") 10 10, pointer;
+}
+
+/* ---------------------------------------------------
+   Cleanup (remove unwanted animations, fix mentions)
+--------------------------------------------------- */
+.tutorialContainer__1f388 .svg_cc5dd2 {
+  animation-name: none !important;
+}
+
+.mention,
+.mention-2GpXsf,
+.mention-2GPq0G,
+.mention-3Nafk2,
+.mention-2DCO-D,
+.mention-1S2do4,
+.mention-16XuR9,
+.span-1CGP5K,
+.mentionTag {
+  font-weight: var(--mention-font-weight) !important;
+}
