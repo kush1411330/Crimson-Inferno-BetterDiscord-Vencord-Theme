@@ -10,6 +10,9 @@ Installation Steps:
 ![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/master/Discord%20Home%20page.png)
 
 
+![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/b6aa2b4e0a0a1c9c06f10fc2a89960f38e2e2d23/Channel%20Section.png)
+
+
 
 
 
