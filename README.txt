@@ -11,3 +11,4 @@ Installation Steps:
 ![image alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/raw/9c8629a2e31131c9b40025b5880cd8fcc096d21/Discord%20Home%20page.png)
 
 
+
