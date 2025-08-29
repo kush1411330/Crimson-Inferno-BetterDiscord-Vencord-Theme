@@ -8,7 +8,8 @@ Installation Steps:
 2. Navigate to Settings -> Themes -> Edit QuickCSS
 3. Paste the code from CSS file to the Edit QuickCSS window.
 
-![image alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/raw/9c8629a2e31131c9b40025b5880cd8fcc096d21/Discord%20Home%20page.png)
+![Discord Home](https://raw.githubusercontent.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/master/Discord%20Home%20page.png)
+
 
 
 
