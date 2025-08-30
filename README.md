@@ -24,6 +24,8 @@ Custom Cursor
 
 ![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/1534839b799a0aed8c4db7062b90ce4590ee08c3/Complete%20showcase.gif)
 
+![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/1db55dece10c2c7c8b8dbee0f115e939ed218a26/Ping%20animation.gif)
+
 
 ![Alt](https://github.com/kush1411330/Crimson-Inferno-BetterDiscord-Vencord-Theme/blob/1534839b799a0aed8c4db7062b90ce4590ee08c3/channel%20flicker.gif)
 
